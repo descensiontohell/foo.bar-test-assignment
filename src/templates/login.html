@@ -1,0 +1,31 @@
+<div class="register__form" style='display:flex;flex-direction:column;'">
+  <div>Register</div>
+  <form method="POST" action="">
+    <div>{{ register_form.identifier(hidden=True, value='REGISTER') }}</div>
+    <div>{{ register_form.csrf_token }}</div>
+    <div>{{ register_form.register_name.label }} {{ register_form.register_name(size=20) }}</div>
+    <div>{{ register_form.password.label }} {{ register_form.password(size=16) }}</div>
+    <div>{{ register_form.email.label }} {{ register_form.email(size=30) }}</div>
+    <input type="submit" value="Register">
+  </form>
+</div>
+{% for field, errors in register_form.errors.items() %}
+<div class="alert alert-error">
+    {{ register_form[field].label }}: {{ ', '.join(errors) }}
+</div>
+{% endfor %}
+
+<div class="login__form" style='display:flex;flex-direction:column;'">
+  <div>Login</div>
+  <form method="POST" action="">
+    <div>{{ login_form.identifier(hidden=True, value='LOGIN') }}</div>
+    <div>{{ login_form.csrf_token }}</div>
+    <div>{{ login_form.login_name.label }} {{ login_form.login_name(size=20) }}</div>
+    <div>{{ login_form.password.label }} {{ login_form.password(size=16) }}</div>
+    <input type="submit" value="Login">
+</form>
+{% for field, errors in login_form.errors.items() %}
+<div class="alert alert-error">
+    {{ login_form[field].label }}: {{ ', '.join(errors) }}
+</div>
+{% endfor %}

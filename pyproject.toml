@@ -1,0 +1,29 @@
+[tool.black]
+line-length = 120
+
+[tool.pyright]
+typeCheckingMode = "off"
+
+[tool.poetry]
+name = "foo-bar-test-assignment"
+version = "0.1.0"
+description = ""
+authors = ["descensiontohell <isuhanen@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "foo"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Flask = "^2.2.2"
+Flask-SQLAlchemy = "^2.5.1"
+Flask-WTF = "^1.0.1"
+Flask-Babel = "^2.0.0"
+python-dotenv = "^0.21.0"
+Flask-Login = "^0.6.2"
+psycopg2 = "^2.9.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,8 +1,8 @@
-from flask import Blueprint, redirect, render_template, g
-from flask_login import login_user, current_user
+from flask import Blueprint, redirect, render_template, g, flash
+from flask_login import login_user, current_user, logout_user
 
 from src.app.services.user.forms import LoginForm, RegisterForm
-from src.app.services.user.logic import user_service
+from src.app.services.user.service import user_service
 
 
 auth_bp = Blueprint("auth", __name__)
@@ -31,3 +31,9 @@ def index():
         )
 
     return render_template("login.html", login_form=login_form, register_form=register_form)
+
+
+@auth_bp.route("/logout")
+def logout():
+    logout_user()
+    return redirect("/")

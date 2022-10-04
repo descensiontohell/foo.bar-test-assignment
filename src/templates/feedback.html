@@ -1,23 +1,23 @@
 {% if current_user.is_authenticated %}
-  Logged in as {{ current_user.username }}
+  {{ _("Logged in as") }} {{ current_user.username }}
   <a href="/logout">
-   <button>Logout</button>
+  <button>{{ _("Logout") }}</button>
   </a>
 {% else %}
-<a href="/">login</a>
+<a href="/">{{ _("login") }}</a>
 {% endif %}
 
-<a href="/feedback">feedback</a>
-<a href="/users">users</a>
+<a href="/feedback">{{ _("feedback") }}</a>
+<a href="/users">{{ _("users") }}</a>
 
 <div class="feedback__form" style='display:flex;flex-direction:column;'">
-  <div>Submit feedback</div>
+  <div>{{ _("Submit feedback") }}</div>
   <form method="POST" action="">
     <div>{{ feedback_form.csrf_token }}</div>
     <div>{{ feedback_form.creator.label }} {{ feedback_form.creator(size=20) }}</div>
     <div>{{ feedback_form.content.label }} {{ feedback_form.content(size=160) }}</div>
     <div>{{ feedback_form.recaptcha }}</div>
-    <input type="submit" value="Submit">
+    <input type="submit" value="{{ _('Submit') }}">
   </form>
 </div>
 
@@ -28,5 +28,5 @@
 {% endfor %}
 
 {% if is_submitted %}
-<p>Thank you for the feedback!</p>
+<p>{{ _("Thank you for the feedback!") }}</p>
 {% endif %}

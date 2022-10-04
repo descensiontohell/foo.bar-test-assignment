@@ -1,12 +1,12 @@
 {% if current_user.is_authenticated %}
   Logged in as {{ current_user.username }}
   <a href="/logout">
-   <button>Logout</button>
+    <button>{{ _("Logout") }}</button>
   </a>
 {% endif %}
 
-<a href="/feedback">feedback</a>
-<a href="/users">users</a>
+<a href="/feedback">{{ _("feedback") }}</a>
+<a href="/users">{{ _("users") }}</a>
 
 {% with messages = get_flashed_messages() %}
   {% if messages %}
@@ -20,14 +20,14 @@
 
 {% if not current_user.is_authenticated %}
 <div class="register__form" style='display:flex;flex-direction:column;'">
-  <div>Register</div>
+  <div>{{ _("Register") }}</div>
   <form method="POST" action="">
     <div>{{ register_form.identifier(hidden=True, value='REGISTER') }}</div>
     <div>{{ register_form.csrf_token }}</div>
     <div>{{ register_form.register_name.label }} {{ register_form.register_name(size=20) }}</div>
     <div>{{ register_form.password.label }} {{ register_form.password(size=16) }}</div>
     <div>{{ register_form.email.label }} {{ register_form.email(size=30) }}</div>
-    <input type="submit" value="Register">
+    <input type="submit" value="{{ _('Register') }}">
   </form>
 </div>
 {% for field, errors in register_form.errors.items() %}
@@ -37,14 +37,14 @@
 {% endfor %}
 
 <div class="login__form" style='display:flex;flex-direction:column;'">
-  <div>Login</div>
+  <div>{{ _("Login") }}</div>
   <form method="POST" action="">
     <div>{{ login_form.identifier(hidden=True, value='LOGIN') }}</div>
     <div>{{ login_form.csrf_token }}</div>
     <div>{{ login_form.login_name.label }} {{ login_form.login_name(size=20) }}</div>
     <div>{{ login_form.password.label }} {{ login_form.password(size=16) }}</div>
-    <input type="submit" value="Login">
-</form>
+    <input type="submit" value="{{ _('Login') }}"> 
+ </form>
 
 {% for field, errors in login_form.errors.items() %}
 <div class="alert alert-error">

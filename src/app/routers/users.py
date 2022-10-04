@@ -1,4 +1,5 @@
 from flask import Blueprint, redirect, render_template
+from flask_babel import format_datetime
 from flask_login import current_user, login_required
 
 from src.app.services.feedback.service import feedback_service
@@ -12,6 +13,8 @@ users_bp = Blueprint("users", __name__)
 def get_users():
     users = user_service.get_all()
     messages = feedback_service.get_all()
+    for m in messages:
+        m.created_at = format_datetime(m.created_at)
     return render_template("users.html", users=users, feedback_messages=messages)
 
 

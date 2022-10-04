@@ -1,0 +1,118 @@
+# Dutch translations for PROJECT.
+# Copyright (C) 2022 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-10-04 18:17+0300\n"
+"PO-Revision-Date: 2022-10-04 17:07+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: nl\n"
+"Language-Team: nl <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+msgid "Please fill out this field"
+msgstr "Vul alstublieft dit veld in"
+
+msgid "Successful registration"
+msgstr "Succesvolle registratie"
+
+msgid "You should login to access the resource"
+msgstr "U moet zich aanmelden om toegang te krijgen tot de resource"
+
+msgid "Name"
+msgstr "Naam"
+
+msgid "Message"
+msgstr "Bericht"
+
+msgid "Captcha"
+msgstr "Captcha"
+
+msgid "Submit"
+msgstr "Verzenden"
+
+msgid "Username"
+msgstr "Gebruikersnaam"
+
+msgid "Password"
+msgstr "Wachtwoord"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Register"
+msgstr "Registeren"
+
+msgid "Name already registered"
+msgstr "Gebruikersnaam is al geregistreerd"
+
+msgid "Email already registered"
+msgstr "E-mail is al geregistreerd"
+
+msgid "Login"
+msgstr "Inloggen"
+
+msgid "No user with such name"
+msgstr "Geen gebruiker met deze naam"
+
+msgid "Invalid password"
+msgstr "Ongeldig wachtwoord"
+
+msgid "Logged in as"
+msgstr "Ingelogd als"
+
+msgid "Logout"
+msgstr "Uitloggen"
+
+msgid "login"
+msgstr "inloggen"
+
+msgid "feedback"
+msgstr "feedback"
+
+msgid "users"
+msgstr "gebruikers"
+
+msgid "Submit feedback"
+msgstr "Feedback sturen"
+
+msgid "Thank you for the feedback!"
+msgstr "Dank u voor de feedback!"
+
+msgid "Requested page not found. You may want to visit one of the following pages"
+msgstr "Opgevraagde pagina niet gevonden. U kunt een van de volgende pagina's bezoeken"
+
+msgid "Users"
+msgstr "Gebruikers"
+
+msgid "id"
+msgstr "id"
+
+msgid "username"
+msgstr "gebruikersnaam"
+
+msgid "email"
+msgstr "e-mail"
+
+msgid "Delete"
+msgstr "Verwijder"
+
+msgid "Messages"
+msgstr "Berichten"
+
+msgid "Creator"
+msgstr "Maker"
+
+msgid "Content"
+msgstr "Inhoud"
+
+msgid "Created At"
+msgstr "Gemaakt Om"

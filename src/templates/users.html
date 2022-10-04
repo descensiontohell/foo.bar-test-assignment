@@ -1,15 +1,15 @@
-Logged in as {{ current_user.username }}
+{{ _("Logged in as") }} {{ current_user.username }}
 <a href="/logout">
- <button>Logout</button>
+  <button>{{ _("Logout") }}</button>
 </a>
-<a href="/feedback">feedback</a>
+<a href="/feedback">{{ _("feedback") }}</a>
 
-<h1>Users</h1>
+<h1>{{ _("Users") }}</h1>
 <table>
   <tr>
-    <th>id</th>
-    <th>username</th>
-    <th>email</th>
+    <th>{{ _("id") }}</th>
+    <th>{{ _("username") }}</th>
+    <th>{{ _("email") }}</th>
   </tr>
 {% for user in users %}
 <tr>
@@ -19,7 +19,7 @@ Logged in as {{ current_user.username }}
   <th>  
     {% if current_user.id != user.id %}
       <a href="/users/delete/{{user.id}}">
-       <button>Delete</button>
+        <button>{{ _("Delete") }}</button>
       </a>
     {% endif %}
   </th>
@@ -27,13 +27,13 @@ Logged in as {{ current_user.username }}
 {% endfor %}
 </table>
 
-<h1>Messages</h1>
+<h1>{{ _("Messages") }}</h1>
 <table>
   <tr>
-    <th>id</th>
-    <th>Creator</th>
-    <th>Content</th>
-    <th>Created At</th>
+    <th>{{ _("id") }}</th>
+    <th>{{ _("Creator") }}</th>
+    <th>{{ _("Content") }}</th>
+    <th>{{ _("Created At") }}</th>
   </tr>
 {% for message in feedback_messages %}
 <tr>

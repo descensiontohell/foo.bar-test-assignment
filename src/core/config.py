@@ -6,6 +6,8 @@ load_dotenv()
 
 
 class Config:
+    BABEL_DEFAULT_LOCALE = "en_US"
+    BABEL_TRANSLATION_DIRECTORIES = "src/translations/"
     DB_USER = os.getenv("POSTGRES_USER")
     DB_PASSWORD = os.getenv("POSTGRES_PASSWORD")
     DB_NAME = os.getenv("POSTGRES_DB")

@@ -1,4 +1,5 @@
 from flask import Blueprint, flash, g, redirect, render_template
+from flask_babel import _
 from flask_login import current_user, login_user, logout_user
 
 from src.app.services.user.forms import LoginForm, RegisterForm
@@ -28,6 +29,7 @@ def index():
             username=register_form.register_name.data,
             password=register_form.password.data,
         )
+        flash(_("Successful registration"))
 
     return render_template("login.html", login_form=login_form, register_form=register_form)
 

@@ -4,7 +4,7 @@ from flask_babel import Babel
 babel = Babel()
 
 
-def setup_babel(app):
+def setup_babel(app) -> None:
     babel.init_app(app)
 
 

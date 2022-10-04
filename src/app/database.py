@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
 
 
-def setup_db(app: Flask):
+def setup_db(app: Flask) -> None:
     # imports are required for proper migration
     from src.core.feedback.models import FeedbackMessage
     from src.core.user.models import User

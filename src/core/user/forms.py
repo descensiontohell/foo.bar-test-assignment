@@ -13,7 +13,7 @@ class RegisterForm(FlaskForm):
     submit = SubmitField(_l("Register"))
     identifier = StringField()
 
-    def validate(self):
+    def validate(self) -> bool:
         """
         Makes sure that username and email are not taken
         """
@@ -37,7 +37,7 @@ class LoginForm(FlaskForm):
     submit = SubmitField(_l("Login"))
     identifier = StringField()
 
-    def validate(self):
+    def validate(self) -> bool:
         """
         Makes sure that user exists and the password is correct
         """

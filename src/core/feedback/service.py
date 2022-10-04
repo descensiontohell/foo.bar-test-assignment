@@ -5,7 +5,7 @@ from src.app.database import db
 
 
 class FeedbackService:
-    def create_message(self, creator: str, content: str):
+    def create_message(self, creator: str, content: str) -> None:
         """Creates a message with given creator and content"""
 
         new_message = FeedbackMessage(creator=creator, content=content)

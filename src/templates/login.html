@@ -8,6 +8,16 @@
 <a href="/feedback">feedback</a>
 <a href="/users">users</a>
 
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
 {% if not current_user.is_authenticated %}
 <div class="register__form" style='display:flex;flex-direction:column;'">
   <div>Register</div>

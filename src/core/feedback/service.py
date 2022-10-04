@@ -1,7 +1,7 @@
 from sqlalchemy import desc
 
-from src.app.services.feedback.models import FeedbackMessage
-from src.core.database import db
+from src.core.feedback.models import FeedbackMessage
+from src.app.database import db
 
 
 class FeedbackService:

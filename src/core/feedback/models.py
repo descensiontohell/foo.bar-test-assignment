@@ -1,6 +1,6 @@
 from sqlalchemy.sql import func
 
-from src.core.database import db
+from src.app.database import db
 
 
 class FeedbackMessage(db.Model):

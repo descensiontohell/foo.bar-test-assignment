@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template
 
-from src.app.services.feedback.forms import FeedbackForm
-from src.app.services.feedback.service import feedback_service
+from src.core.feedback.forms import FeedbackForm
+from src.core.feedback.service import feedback_service
 
 feedback_bp = Blueprint("feedback", __name__)
 

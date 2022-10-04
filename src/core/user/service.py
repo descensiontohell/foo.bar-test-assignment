@@ -1,7 +1,7 @@
 from typing import Optional
 
-from src.app.services.user.models import User
-from src.core.database import db
+from src.core.user.models import User
+from src.app.database import db
 
 
 class UserService:

@@ -1,5 +1,5 @@
 {% if current_user.is_authenticated %}
-  Logged in as {{ current_user.username }}
+  {{ _("Logged in as") }} {{ current_user.username }}
   <a href="/logout">
     <button>{{ _("Logout") }}</button>
   </a>
@@ -19,14 +19,14 @@
 {% endwith %}
 
 {% if not current_user.is_authenticated %}
-<div class="register__form" style='display:flex;flex-direction:column;'">
+<div class="register__form" style='display:flex;flex-direction:column;padding-top:30px'>
   <div>{{ _("Register") }}</div>
   <form method="POST" action="">
     <div>{{ register_form.identifier(hidden=True, value='REGISTER') }}</div>
     <div>{{ register_form.csrf_token }}</div>
-    <div>{{ register_form.register_name.label }} {{ register_form.register_name(size=20) }}</div>
-    <div>{{ register_form.password.label }} {{ register_form.password(size=16) }}</div>
-    <div>{{ register_form.email.label }} {{ register_form.email(size=30) }}</div>
+    <div style="width:140px;">{{ register_form.register_name.label }}* {{ register_form.register_name(size=20) }}</div>
+    <div style="width:140px;">{{ register_form.password.label }}* {{ register_form.password(size=16) }}</div>
+    <div style="width:140px;">{{ register_form.email.label }} {{ register_form.email(size=30) }}</div>
     <input type="submit" value="{{ _('Register') }}">
   </form>
 </div>
@@ -36,13 +36,13 @@
 </div>
 {% endfor %}
 
-<div class="login__form" style='display:flex;flex-direction:column;'">
+<div class="login__form" style='display:flex;flex-direction:column;padding-top:30px'>
   <div>{{ _("Login") }}</div>
   <form method="POST" action="">
     <div>{{ login_form.identifier(hidden=True, value='LOGIN') }}</div>
     <div>{{ login_form.csrf_token }}</div>
-    <div>{{ login_form.login_name.label }} {{ login_form.login_name(size=20) }}</div>
-    <div>{{ login_form.password.label }} {{ login_form.password(size=16) }}</div>
+    <div style="width:140px;">{{ login_form.login_name.label }} {{ login_form.login_name(size=20) }}</div>
+    <div style="width:140px;">{{ login_form.password.label }} {{ login_form.password(size=16) }}</div>
     <input type="submit" value="{{ _('Login') }}"> 
  </form>
 

@@ -1,5 +1,3 @@
-
-
 ### Тестовое задание для ...
 Задача - разработать веб-приложение со следующим функционалом:
 1. Страница для логина и регистрации
@@ -30,7 +28,9 @@
 
 ### Развертывание
 Требуется развернутая база PostgreSQL на `localhost:5432`
-
+```
+docker run -p 5432:5432 -e POSTGRES_PASSWORD=postgres postgres 
+```
 Локальное развертывание в Linux (может меняться в зависимости от ОС):
 1. Склонировать репозиторий 
 ```
@@ -52,16 +52,17 @@ vim .env
 RECAPTCHA_PUBLIC_KEY=foo
 RECAPTCHA_PRIVATE_KEY=bar
 ```
-5. Скомпилировать перевод
-```
-pybabel compile -d src/translations
-```
-6. Запустить приложение
+5. Активировать виртуальную среду
 ```
 poetry shell
 ```
+6. Скомпилировать перевод
+```
+pybabel compile -d src/translations
+```
+7. Запустить приложение
 ```
 python run.py
 ```
-7. Перейти в http://localhost:5000
+8. Перейти в http://localhost:5000
 

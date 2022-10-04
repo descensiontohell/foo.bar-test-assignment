@@ -12,6 +12,7 @@ def setup_app():
     app = Flask("foo")
     app.register_blueprint(auth_bp)
     app.register_blueprint(feedback_bp)
+    app.register_blueprint(errors_bp)
     app.register_error_handler(404, redirect_to_not_found)
     app.register_error_handler(403, redirect_to_access_denied)
     app.register_error_handler(401, redirect_to_access_denied)

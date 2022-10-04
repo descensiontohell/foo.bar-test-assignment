@@ -8,7 +8,7 @@
 4. Страница, на которую редиректится пользователь, если ресурс не найден
 5. Перевод на русский язык с flask_babel
 ### Технические детали
-Технологии: Python, Flask, PostgreSQL (Flask-SQLAlchemy), Flask-Login, Flask-Babel.
+Технологии: Python, Flask, PostgreSQL (Flask-SQLAlchemy), Flask-Login, Flask-Babel, Flask-WTF.
 
 Приложение переведено на русский и нидерландский языки (зависит от языка браузера). 
 

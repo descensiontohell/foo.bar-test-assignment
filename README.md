@@ -23,7 +23,10 @@
 Если неавторизованный пользователь пытается перейти в `/users`, он редиректится в `/` и видит сообщение о том, что для доступа к ресурсу необходима авторизация. 
 
 ### Скриншоты
-TODO
+![image](https://user-images.githubusercontent.com/64037726/193897870-1f66ae1f-b521-4b98-bfc6-3bfc7a7e449d.png)
+![image](https://user-images.githubusercontent.com/64037726/193898420-bea9d85e-0971-4106-8fb4-87a74abc3094.png)
+![image](https://user-images.githubusercontent.com/64037726/193898767-53db9dda-42a3-4538-bde6-07858aee4822.png)
+
 
 ### Развертывание
 Требуется развернутая база PostgreSQL на `localhost:5432`

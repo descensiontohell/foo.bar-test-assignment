@@ -9,7 +9,7 @@ from src.core.user.service import user_service
 class RegisterForm(FlaskForm):
     register_name = StringField(_l("Username"), validators=[DataRequired()])
     password = PasswordField(_l("Password"), validators=[DataRequired(), Length(min=4, max=16)])
-    email = EmailField(_l("Email"))
+    email = EmailField(_l("Email"), validators=[DataRequired()])
     submit = SubmitField(_l("Register"))
     identifier = StringField()
 

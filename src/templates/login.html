@@ -1,3 +1,14 @@
+{% if current_user.is_authenticated %}
+  Logged in as {{ current_user.username }}
+  <a href="/logout">
+   <button>Logout</button>
+  </a>
+{% endif %}
+
+<a href="/feedback">feedback</a>
+<a href="/users">users</a>
+
+{% if not current_user.is_authenticated %}
 <div class="register__form" style='display:flex;flex-direction:column;'">
   <div>Register</div>
   <form method="POST" action="">
@@ -24,8 +35,11 @@
     <div>{{ login_form.password.label }} {{ login_form.password(size=16) }}</div>
     <input type="submit" value="Login">
 </form>
+
 {% for field, errors in login_form.errors.items() %}
 <div class="alert alert-error">
     {{ login_form[field].label }}: {{ ', '.join(errors) }}
 </div>
 {% endfor %}
+
+{% endif %}

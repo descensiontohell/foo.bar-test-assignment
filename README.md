@@ -52,16 +52,17 @@ vim .env
 RECAPTCHA_PUBLIC_KEY=foo
 RECAPTCHA_PRIVATE_KEY=bar
 ```
-5. Скомпилировать перевод
-```
-pybabel compile -d src/translations
-```
-6. Запустить приложение
+5. Активировать виртуальную среду
 ```
 poetry shell
 ```
+6. Скомпилировать перевод
+```
+pybabel compile -d src/translations
+```
+7. Запустить приложение
 ```
 python run.py
 ```
-7. Перейти в http://localhost:5000
+8. Перейти в http://localhost:5000
 

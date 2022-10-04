@@ -11,7 +11,9 @@ class FeedbackService:
         db.session.commit()
 
     def get_all(self) -> list[FeedbackMessage]:
-        messages = db.session.execute(db.select(FeedbackMessage).order_by(desc(FeedbackMessage.created_at))).scalars()
+        messages = (
+            db.session.execute(db.select(FeedbackMessage).order_by(desc(FeedbackMessage.created_at))).scalars().all()
+        )
         return messages
 
 

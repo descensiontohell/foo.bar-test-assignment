@@ -1,0 +1,46 @@
+Logged in as {{ current_user.username }}
+<a href="/logout">
+ <button>Logout</button>
+</a>
+<a href="/feedback">feedback</a>
+
+<h1>Users</h1>
+<table>
+  <tr>
+    <th>id</th>
+    <th>username</th>
+    <th>email</th>
+  </tr>
+{% for user in users %}
+<tr>
+  <th>{{user.id}}</th>
+  <th>{{user.username}} </th>
+  <th>{{user.email}} </th>
+  <th>  
+    {% if current_user.id != user.id %}
+      <a href="/users/delete/{{user.id}}">
+       <button>Delete</button>
+      </a>
+    {% endif %}
+  </th>
+</tr>
+{% endfor %}
+</table>
+
+<h1>Messages</h1>
+<table>
+  <tr>
+    <th>id</th>
+    <th>Creator</th>
+    <th>Content</th>
+    <th>Created At</th>
+  </tr>
+{% for message in feedback_messages %}
+<tr>
+  <th>{{message.id}}</th>
+  <th>{{message.creator}} </th>
+  <th>{{message.content}} </th>
+  <th>{{message.created_at}}</th>
+</tr>
+{% endfor %}
+</table>

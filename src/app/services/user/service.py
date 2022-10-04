@@ -12,9 +12,17 @@ class UserService:
         user = User.query.filter_by(email=email).first()
         return user
 
-    def create_user(self, email: str, username: str, password: str):
+    def create_user(self, email: str, username: str, password: str) -> None:
         new_user = User(email=email, username=username, password=password)
         db.session.add(new_user)
+        db.session.commit()
+
+    def get_all(self) -> list[User]:
+        users = User.query.all()
+        return users
+
+    def delete_by_id(self, user_id: int) -> None:
+        User.query.filter_by(id=user_id).delete()
         db.session.commit()
 
 

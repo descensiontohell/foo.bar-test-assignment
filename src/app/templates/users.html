@@ -18,9 +18,9 @@
   <th>{{user.email}} </th>
   <th>  
     {% if current_user.id != user.id %}
-      <a href="/users/delete/{{user.id}}">
+      <form action="/users/delete/{{user.id}}" method="post">
         <button>{{ _("Delete") }}</button>
-      </a>
+      </form>
     {% endif %}
   </th>
 </tr>

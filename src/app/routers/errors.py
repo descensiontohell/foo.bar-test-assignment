@@ -1,6 +1,5 @@
 from flask import Blueprint, redirect, render_template
 
-
 errors_bp = Blueprint("errors", __name__)
 
 

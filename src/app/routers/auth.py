@@ -1,5 +1,5 @@
-from flask import Blueprint, redirect, render_template, g, flash
-from flask_login import login_user, current_user, logout_user
+from flask import Blueprint, flash, g, redirect, render_template
+from flask_login import current_user, login_user, logout_user
 
 from src.app.services.user.forms import LoginForm, RegisterForm
 from src.app.services.user.service import user_service

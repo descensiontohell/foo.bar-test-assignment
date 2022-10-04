@@ -1,12 +1,11 @@
 from flask import Flask
 
-from src.core.config import setup_config
-from src.core.database import setup_db
-from src.core.login import setup_login
 from src.app.routers.auth import auth_bp
+from src.app.routers.errors import errors_bp, redirect_to_access_denied, redirect_to_not_found
 from src.app.routers.feedback import feedback_bp
 from src.app.routers.users import users_bp
-from src.app.routers.errors import errors_bp, redirect_to_not_found, redirect_to_access_denied
+from src.core.database import setup_db
+from src.core.login import setup_login
 
 
 def setup_app():

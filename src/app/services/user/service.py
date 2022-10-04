@@ -1,4 +1,5 @@
 from typing import Optional
+
 from src.app.services.user.models import User
 from src.core.database import db
 

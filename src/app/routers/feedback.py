@@ -3,7 +3,6 @@ from flask import Blueprint, render_template
 from src.app.services.feedback.forms import FeedbackForm
 from src.app.services.feedback.service import feedback_service
 
-
 feedback_bp = Blueprint("feedback", __name__)
 
 

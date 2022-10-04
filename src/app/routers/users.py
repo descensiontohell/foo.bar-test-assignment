@@ -1,9 +1,8 @@
 from flask import Blueprint, redirect, render_template
 from flask_login import current_user, login_required
 
-from src.app.services.user.service import user_service
 from src.app.services.feedback.service import feedback_service
-
+from src.app.services.user.service import user_service
 
 users_bp = Blueprint("users", __name__)
 

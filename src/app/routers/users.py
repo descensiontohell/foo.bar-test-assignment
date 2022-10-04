@@ -11,6 +11,10 @@ users_bp = Blueprint("users", __name__)
 @users_bp.route("/users", methods=["GET"])
 @login_required
 def get_users():
+    """
+    Renders all users and feedback messages
+    """
+
     users = user_service.get_all()
     messages = feedback_service.get_all()
     for m in messages:
@@ -21,6 +25,10 @@ def get_users():
 @users_bp.route("/users/delete/<int:user_id>", methods=["GET", "POST"])
 @login_required
 def delete_user(user_id):
+    """
+    Deletes the user. Does nothing on attempt to delete self. Requires login
+    """
+
     if current_user.id != user_id:
         user_service.delete_by_id(user_id)
     return redirect("/users")

@@ -14,6 +14,10 @@ class RegisterForm(FlaskForm):
     identifier = StringField()
 
     def validate(self):
+        """
+        Makes sure that username and email are not taken
+        """
+
         validation = super().validate()
         if not validation:
             return False
@@ -34,6 +38,10 @@ class LoginForm(FlaskForm):
     identifier = StringField()
 
     def validate(self):
+        """
+        Makes sure that user exists and the password is correct
+        """
+
         validation = super().validate()
         if not validation:
             return False

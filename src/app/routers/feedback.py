@@ -8,6 +8,10 @@ feedback_bp = Blueprint("feedback", __name__)
 
 @feedback_bp.route("/feedback", methods=("GET", "POST"))
 def feedback():
+    """
+    Renders a page with a feedback form. Displays a message when user submits the form
+    """
+
     feedback_form = FeedbackForm()
     is_submitted = False
 

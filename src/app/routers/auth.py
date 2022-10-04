@@ -15,6 +15,10 @@ def before_request():
 
 @auth_bp.route("/", methods=("GET", "POST"))
 def index():
+    """
+    Renders an auth page with two forms: login form and register form
+    """
+
     login_form = LoginForm()
     register_form = RegisterForm()
 

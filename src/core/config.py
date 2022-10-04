@@ -1,17 +1,15 @@
 import os
-from flask import Flask
+
 from dotenv import load_dotenv
 
+load_dotenv()
 
-def setup_config(app: Flask):
-    load_dotenv()
 
-    user = os.getenv("POSTGRES_USER")
-    password = os.getenv("POSTGRES_PASSWORD")
-    db = os.getenv("POSTGRES_DB")
-    secret_key = os.getenv("SECRET_KEY")
-
-    app.config["SQLALCHEMY_DATABASE_URI"] = f"postgresql://{user}:{password}@localhost:5432/{db}"
-    app.config["SECRET_KEY"] = secret_key if secret_key else os.urandom(32)
-    app.config["RECAPTCHA_PUBLIC_KEY"] = os.getenv("RECAPTCHA_PUBLIC_KEY")
-    app.config["RECAPTCHA_PRIVATE_KEY"] = os.getenv("RECAPTCHA_PRIVATE_KEY")
+class Config:
+    DB_USER = os.getenv("POSTGRES_USER")
+    DB_PASSWORD = os.getenv("POSTGRES_PASSWORD")
+    DB_NAME = os.getenv("POSTGRES_DB")
+    SECRET_KEY = os.getenv("SECRET_KEY") or os.urandom(32)
+    RECAPTCHA_PUBLIC_KEY = os.getenv("RECAPTCHA_PUBLIC_KEY")
+    RECAPTCHA_PRIVATE_KEY = os.getenv("RECAPTCHA_PRIVATE_KEY")
+    SQLALCHEMY_DATABASE_URI = f"postgresql://{DB_USER}:{DB_PASSWORD}@localhost:5432/{DB_NAME}"
